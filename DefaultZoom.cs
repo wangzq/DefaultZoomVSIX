@@ -6,9 +6,8 @@ using System.ComponentModel.Composition;
 namespace DefaultZoomVSIX
 {
     [Export(typeof(IWpfTextViewCreationListener))]
-    [ContentType("code")]
-    [ContentType("text")]
-    [TextViewRole(PredefinedTextViewRoles.Document)]
+    [ContentType("any")]
+    [TextViewRole(PredefinedTextViewRoles.Zoomable)]
     internal class DefaultZoom : IWpfTextViewCreationListener
     {
         public void TextViewCreated(IWpfTextView textView)
